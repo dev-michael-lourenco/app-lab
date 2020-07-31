@@ -1,5 +1,5 @@
 # BACKEND
-### API BASEADA NO OMNISTACK 11 DA ROCKETSEAT
+### API BASED ON OMNISTACK 11 OF ROCKETSEAT BR
 
 # REST API example application
 
@@ -17,7 +17,7 @@ The REST API to the example app is described below.
 
 `GET /users/`
 
-    curl -i -H 'Accept: application/json' http://localhost:3333/users/
+    http://localhost:3333/users/
 
 ### Response
 
@@ -188,7 +188,7 @@ The REST API to the example app is described below.
 
 `DELETE /users/id`
 
-   http://localhost:3333/users/1/
+    http://localhost:3333/users/1/
 
 ### Response
 
