@@ -9,16 +9,16 @@ module.exports={
         console.log(count)
 
         const dealerships= await connection('dealerships')
-        .join('ongs','ongs.id','=','dealerships.ong_id')
+        .join('users','users.id','=','dealerships.user_id')
         .limit(5)
         .offset((page-1)*5)
         .select([
             'dealerships.*',
-            'ongs.name',
-            'ongs.email',
-            'ongs.whatsapp',
-            'ongs.city',
-            'ongs.uf'
+            'users.name',
+            'users.email',
+            'users.whatsapp',
+            'users.city',
+            'users.uf'
         ]);
 
         response.header('X-Total-Count',count['count(*)'])
@@ -39,7 +39,7 @@ module.exports={
             streetNumber,
             }=request.body
 
-        const ong_id=request.headers.authorization
+        const user_id=request.headers.authorization
 
         // o [id] é uma desestrutura do resultado ques está no await
         // este id esta implicito pois na migration foi declarado como increments
@@ -55,7 +55,7 @@ module.exports={
                 zipcode,
                 streetName,
                 streetNumber,
-                ong_id
+                user_id
         })
 
         return response.json({id})
@@ -63,14 +63,14 @@ module.exports={
 
     async delete(request,response){
         const {id} = request.params
-        const ong_id = request.headers.authorization
+        const user_id = request.headers.authorization
 
         const dealership = await connection('dealerships')
         .where('id',id)
-        .select('ong_id')
+        .select('user_id')
         .first();
 
-        if(dealership.ong_id!==ong_id){
+        if(dealership.user_id!==user_id){
            return response.status(401).json({error:"Operação não autorizada"})
         }
         await connection('dealerships').where('id',id).delete();

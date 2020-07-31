@@ -65,7 +65,7 @@ const concessionarias =[
 
   */
 
- const valorMedia = numeros.reduce(function(acumulador,valorAtual, index, arr){
+ /*const valorMedia = numeros.reduce(function(acumulador,valorAtual, index, arr){
     acumulador = acumulador + valorAtual
 
     if(index===arr,length-1){
@@ -73,7 +73,7 @@ const concessionarias =[
     }
     return acumulador
  },0)
-
+*/
   /*
 NORMALIZAR DADOS
 */
@@ -113,5 +113,5 @@ function agrupaPor(arr, chave){
   //const agrupadosPorUf = agrupaPor(concessionarias,"uf")
  // console.log('agrupadosPorUf',agrupadosPorUf)
 
-// const concessionariasNormalizadasPadrao = normalizar(concessionarias,"id")
-// console.log('concessionariasNormalizadasPadrao',concessionariasNormalizadasPadrao)
+const concessionariasNormalizadasPadrao = normalizar(concessionarias,"id")
+ console.log('concessionariasNormalizadasPadrao',concessionariasNormalizadasPadrao)

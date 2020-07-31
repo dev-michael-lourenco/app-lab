@@ -1,9 +1,9 @@
 const axios =require('axios');
-const concessionariaDataMock = require('./resource/concessionariaDataMock.js')
+const concessionariaDataMock = require('./providers/concessionariaDataMock.js')
 const concessionariaModel = require('./model/concessionaria.js')
 //const geoCoderModel = require('./model/geocoder.js')
 
-const fakeGeoCoderMock = require('./resource/fakeGeoCoderMock.js')
+const fakeGeoCoderMock = require('./providers/fakeGeoCoderMock.js')
 //console.log("FAKE:"+JSON.stringify(fakeGeoCoderMock))
 function tratarConcessionaria(){
     

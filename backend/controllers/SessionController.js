@@ -4,14 +4,14 @@ const connection = require('../src/database/connection')
      async create(request,response){
          const {id} = request.body
 
-         const ong=await connection('ongs')
+         const user=await connection('users')
          .where('id',id)
          .select('name')
          .first()
 
-         if(!ong){
-            return response.status(400).json({error:"Nenhuma ONG encontrada com este id"})
+         if(!user){
+            return response.status(400).json({error:"Nenhuma USER encontrada com este id"})
          }
-            return response.json({ong})
+            return response.json({user})
      }
  }
