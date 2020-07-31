@@ -1,7 +1,7 @@
 const axios =require('axios');
 const concessionariaDataMock = require('./providers/concessionariaDataMock.js')
-const concessionariaModel = require('./model/concessionaria.js')
-//const geoCoderModel = require('./model/geocoder.js')
+const concessionariaModel = require('./model/concessionariaModel.js')
+//const geoCoderProvider = require('./provider/geocoder.js')
 
 const fakeGeoCoderMock = require('./providers/fakeGeoCoderMock.js')
 //console.log("FAKE:"+JSON.stringify(fakeGeoCoderMock))
@@ -13,7 +13,7 @@ function tratarConcessionaria(){
 
     const enderecoParaGeoCoder=`${streetName} ${streetNumber} ${city} ${country} ${countryCode}`
 
-    //geoCoderModel.pegarEnderecoPeloGeoCoder(enderecoParaGeoCoder)
+    //geoCoderProvider.pegarEnderecoPeloGeoCoder(enderecoParaGeoCoder)
     //fakeGeoCoderMock.pegarEnderecoPeloGeoCoder(enderecoParaGeoCoder) 
     async function fakeTratarGeocoder (objeto)  {
       return await objeto
