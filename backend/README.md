@@ -248,19 +248,19 @@ The REST API to the example app is described below.
 
 `POST /dealerships/`
 
-{
-	"name":"BASE SOROCABA",
-	"phoneNumber":"21557777",
-	"email":"saquabase@gmail.com",
-	"latitude":"26.330",
-	"longitude":"46.4458", 
-	"country":"Brasil", 
-	"countryCode":"055",
-	"city":"SOROCABA",
-	"zipcode":"21800250",
-	"streetName":"Rua Olimpio da Silva",
-	"streetNumber":"28"
-}
+    {
+        "name":"BASE SOROCABA",
+        "phoneNumber":"21557777",
+        "email":"saquabase@gmail.com",
+        "latitude":"26.330",
+        "longitude":"46.4458", 
+        "country":"Brasil", 
+        "countryCode":"055",
+        "city":"SOROCABA",
+        "zipcode":"21800250",
+        "streetName":"Rua Olimpio da Silva",
+        "streetNumber":"28"
+    }
 
     http://localhost:3333/dealerships
 
@@ -294,23 +294,23 @@ The REST API to the example app is described below.
     Content-Length: 36
 
     [
-    {
-        "id": 2,
-        "name": "Mario Lourenco",
-        "email": "mil@gmail.com",
-        "phoneNumber": "21557777",
-        "latitude": "26.330",
-        "longitude": "46.4458",
-        "country": "Brasil",
-        "countryCode": "055",
-        "city": "SAQUAREMA",
-        "zipcode": "21800250",
-        "streetName": "Rua Olimpio da Silva",
-        "streetNumber": "28",
-        "user_id": "048dea6e",
-        "whatsapp": "1595325788",
-        "uf": "RJ"
-    }
+        {
+            "id": 2,
+            "name": "Mario Lourenco",
+            "email": "mil@gmail.com",
+            "phoneNumber": "21557777",
+            "latitude": "26.330",
+            "longitude": "46.4458",
+            "country": "Brasil",
+            "countryCode": "055",
+            "city": "SAQUAREMA",
+            "zipcode": "21800250",
+            "streetName": "Rua Olimpio da Silva",
+            "streetNumber": "28",
+            "user_id": "048dea6e",
+            "whatsapp": "1595325788",
+            "uf": "RJ"
+        }
     ]
 
 ## Get a non-existent Dealerships
@@ -329,19 +329,20 @@ The REST API to the example app is described below.
     Connection: close
     Content-Type: application/json
     Content-Length: 35
-{
-	"name":"BASE SAQUAREMA",
-	"phoneNumber":"22155766",
-	"email":"saquabase@gmail.com",
-	"latitude":"26.330",
-	"longitude":"46.4458", 
-	"country":"Brasil", 
-	"countryCode":"055",
-	"city":"SAQUAREMA",
-	"zipcode":"22180050",
-	"streetName":"Rua JOSE Olimpio da Silva",
-	"streetNumber":"58"
-}
+    
+    {
+        "name":"BASE SAQUAREMA",
+        "phoneNumber":"22155766",
+        "email":"saquabase@gmail.com",
+        "latitude":"26.330",
+        "longitude":"46.4458", 
+        "country":"Brasil", 
+        "countryCode":"055",
+        "city":"SAQUAREMA",
+        "zipcode":"22180050",
+        "streetName":"Rua JOSE Olimpio da Silva",
+        "streetNumber":"58"
+    }
 
 ## Create another new Dealerships
 
